@@ -1,0 +1,7 @@
+sequenceDiagram
+  participant browser as browser
+  participant server as server
+
+  Note right of browser: Renders the data dynamically and sends the new note
+  browser ->> server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+  server -->> browser: HTTP 201 Created
